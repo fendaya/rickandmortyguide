@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "name": "rickandmortyguide",
+  "description": "The Rick and Morty Guide - Remix Edition",
+  "license": "MIT",
+  "version": "0.0.1",
+  "author": {
+    "name": "Franklin Endaya",
+    "email": "fendaya@gmail.com",
+    "url": "https://github.com/fendaya"
+  },
+  "scripts": {
+    "postinstall": "remix setup node",
+    "dev:css": "tailwindcss -o ./app/tailwind.css -i ./app/styles/tailwind.css --watch",
+    "dev": "concurrently \"tailwindcss -o ./app/tailwind.css -i ./app/styles/tailwind.css --watch\" \"remix dev\"",
+    "build:css": "tailwindcss -o ./app/tailwind.css -i ./app/styles/tailwind.css --minify",
+    "build": "tailwindcss -o ./app/tailwind.css -i ./app/styles/tailwind.css --minify && remix build",
+    "start": "remix-serve build"
+  },
+  "dependencies": {
+    "@heroicons/react": "1.0.5",
+    "@remix-run/react": "^1.1.1",
+    "@remix-run/serve": "^1.1.1",
+    "@remix-run/server-runtime": "^1.1.1",
+    "@remix-run/vercel": "^1.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1",
+    "remix": "1.1.1"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "1.1.1",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "concurrently": "^6.5.1",
+    "tailwindcss": "^3.0.8",
+    "typescript": "^4.5.4"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "sideEffects": false,
+  "keywords": []
+}
